@@ -190,6 +190,12 @@ How to Build and Run
     Bash
 
     sudo insmod monitor.ko
+    
+<img width="746" height="63" alt="insmod" src="https://github.com/user-attachments/assets/62950223-6884-4caf-bc26-dcad3325b6b8" />
+
+
+
+    
 
     Start the Supervisor:
     Bash
