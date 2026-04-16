@@ -109,3 +109,83 @@ Read [`project-guide.md`](project-guide.md) end to end. It contains:
 - The exact submission requirements, including what your `README.md` must contain (screenshots, analysis, design decisions)
 
 Your fork's `README.md` should be replaced with your own project documentation as described in the submission package section of the project guide. (As in get rid of all the above content and replace with your README.md)
+
+Evaluation & Screenshots
+Part A: User-Space Execution
+1. Multi-Container Supervision
+
+Description: Evidence of the supervisor managing multiple independent containers simultaneously.
+
+    <img width="744" height="196" alt="supervision" src="https://github.com/user-attachments/assets/dc1dfc03-bad6-47cd-adc3-10740a1f5cc0" />
+
+
+2. Metadata Tracking
+
+Description: Output of the ps command showing tracked PIDs, states, and memory limits.
+
+    <img width="744" height="196" alt="metadataTracking" src="https://github.com/user-attachments/assets/780d7ae9-8633-4de7-9cd8-29ab26921486" />
+
+
+3. Bounded-Buffer Logging
+
+Description: Evidence of the logging pipeline capturing output from a containerized process.
+
+    <img width="742" height="139" alt="logPiping" src="https://github.com/user-attachments/assets/701e7737-b5fe-4fae-9e60-d08f588cc3d3" />
+
+
+4. CLI and IPC
+
+Description: Demonstration of the CLI sending a command and receiving a synchronous response from the supervisor via UNIX socket.
+
+    <img width="745" height="178" alt="Screenshot from 2026-04-16 13-11-11" src="https://github.com/user-attachments/assets/4a2539f0-28e9-4b07-95f6-0c149432cbbb" />
+
+
+Part B: Kernel & Resource Management
+5. Soft-Limit Warning
+
+Description: Kernel ring buffer (dmesg) output showing the SOFT LIMIT warning when a container exceeds its initial threshold.
+
+    <img width="742" height="139" alt="soflimit" src="https://github.com/user-attachments/assets/3de0c8b7-bfe6-4541-9d73-90b184137769" />
+
+
+6. Hard-Limit Enforcement
+
+Description: Evidence of the kernel module sending SIGKILL to a container and the supervisor updating its state to killed.
+
+    <img width="742" height="139" alt="hardlimit" src="https://github.com/user-attachments/assets/47f009bc-aa86-41e5-883f-719fa91bafdc" />
+
+
+7. Scheduling Experiment
+
+Description: top output showing the impact of the --nice flag on CPU share between a normal and a low-priority container.
+
+    <img width="1145" height="464" alt="priorityContainer" src="https://github.com/user-attachments/assets/2686a13a-6993-483e-a9a7-88d275516ea5" />
+
+
+8. Clean Teardown
+
+Description: Evidence of a clean exit: no zombie processes in ps aux and successful rmmod of the kernel module.
+<img width="1145" height="281" alt="cleanTeardown" src="https://github.com/user-attachments/assets/365224e7-c4fa-438f-a5e9-6b569e7c9509" />
+
+
+How to Build and Run
+
+    Compile the project:
+    Bash
+
+    make
+
+    Load the Monitor:
+    Bash
+
+    sudo insmod monitor.ko
+
+    Start the Supervisor:
+    Bash
+
+    sudo ./engine supervisor ./rootfs-base
+
+    Run a Container:
+    Bash
+
+    sudo ./engine start <id> ./rootfs-base <command>
