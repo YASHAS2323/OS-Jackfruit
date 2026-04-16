@@ -116,7 +116,9 @@ Part A: User-Space Execution
 
 Description: Evidence of the supervisor managing multiple independent containers simultaneously.
 
-    <img width="744" height="196" alt="supervision" src="https://github.com/user-attachments/assets/11bcd7eb-acec-49fd-8965-632c537a074e" />
+   
+<img width="744" height="196" alt="supervision" src="https://github.com/user-attachments/assets/92b5e553-ef99-49b4-8fbf-96565361e2c7" />
+
 
 
 
@@ -124,7 +126,7 @@ Description: Evidence of the supervisor managing multiple independent containers
 
 Description: Output of the ps command showing tracked PIDs, states, and memory limits.
 
-    <img width="744" height="196" alt="metadataTracking" src="https://github.com/user-attachments/assets/6e6c1ad3-fbf8-4a59-af65-ce565ac02e7c" />
+   <img width="744" height="196" alt="metadataTracking" src="https://github.com/user-attachments/assets/d5723ec3-d19b-4492-bea4-9d52d078b57e" />
 
 
 
@@ -156,7 +158,9 @@ Description: Kernel ring buffer (dmesg) output showing the SOFT LIMIT warning wh
 
 Description: Evidence of the kernel module sending SIGKILL to a container and the supervisor updating its state to killed.
 
-    <img width="742" height="139" alt="hardlimit" src="https://github.com/user-attachments/assets/f54fbbe2-ece9-4646-9621-2769f462e51f" />
+<img width="742" height="139" alt="hardlimit" src="https://github.com/user-attachments/assets/5f6bfeef-a9cc-4bff-ba8e-269497e14f05" />
+
+
 
 
 
@@ -164,7 +168,8 @@ Description: Evidence of the kernel module sending SIGKILL to a container and th
 
 Description: top output showing the impact of the --nice flag on CPU share between a normal and a low-priority container.
 
-    <img width="1145" height="464" alt="priorityContainer" src="https://github.com/user-attachments/assets/285aaae5-1fcc-4697-9fa6-196ec7b8af34" />
+   <img width="1145" height="464" alt="priorityContainer" src="https://github.com/user-attachments/assets/394eaba0-d88d-4431-886e-3c59f6bd0db4" />
+
 
 
 
