@@ -116,50 +116,56 @@ Part A: User-Space Execution
 
 Description: Evidence of the supervisor managing multiple independent containers simultaneously.
 
-    <img width="744" height="196" alt="supervision" src="https://github.com/user-attachments/assets/dc1dfc03-bad6-47cd-adc3-10740a1f5cc0" />
+    <img width="744" height="196" alt="supervision" src="https://github.com/user-attachments/assets/11bcd7eb-acec-49fd-8965-632c537a074e" />
+
 
 
 2. Metadata Tracking
 
 Description: Output of the ps command showing tracked PIDs, states, and memory limits.
 
-    <img width="744" height="196" alt="metadataTracking" src="https://github.com/user-attachments/assets/780d7ae9-8633-4de7-9cd8-29ab26921486" />
+    <img width="744" height="196" alt="metadataTracking" src="https://github.com/user-attachments/assets/6e6c1ad3-fbf8-4a59-af65-ce565ac02e7c" />
+
 
 
 3. Bounded-Buffer Logging
 
 Description: Evidence of the logging pipeline capturing output from a containerized process.
 
-    <img width="742" height="139" alt="logPiping" src="https://github.com/user-attachments/assets/701e7737-b5fe-4fae-9e60-d08f588cc3d3" />
+   <img width="742" height="139" alt="logPiping" src="https://github.com/user-attachments/assets/bcd9abc6-2bee-4282-a186-7ab6d828902f" />
+
 
 
 4. CLI and IPC
 
 Description: Demonstration of the CLI sending a command and receiving a synchronous response from the supervisor via UNIX socket.
 
-    <img width="745" height="178" alt="Screenshot from 2026-04-16 13-11-11" src="https://github.com/user-attachments/assets/4a2539f0-28e9-4b07-95f6-0c149432cbbb" />
+   <img width="746" height="192" alt="Screenshot from 2026-04-16 13-21-55" src="https://github.com/user-attachments/assets/3657ddb4-7d46-4ed3-89f2-80373d4e0a61" />
+
 
 
 Part B: Kernel & Resource Management
 5. Soft-Limit Warning
 
 Description: Kernel ring buffer (dmesg) output showing the SOFT LIMIT warning when a container exceeds its initial threshold.
+<img width="742" height="139" alt="soflimit" src="https://github.com/user-attachments/assets/21734a18-7f5a-415c-b8eb-b766f4ae07cb" />
 
-    <img width="742" height="139" alt="soflimit" src="https://github.com/user-attachments/assets/3de0c8b7-bfe6-4541-9d73-90b184137769" />
 
 
 6. Hard-Limit Enforcement
 
 Description: Evidence of the kernel module sending SIGKILL to a container and the supervisor updating its state to killed.
 
-    <img width="742" height="139" alt="hardlimit" src="https://github.com/user-attachments/assets/47f009bc-aa86-41e5-883f-719fa91bafdc" />
+    <img width="742" height="139" alt="hardlimit" src="https://github.com/user-attachments/assets/f54fbbe2-ece9-4646-9621-2769f462e51f" />
+
 
 
 7. Scheduling Experiment
 
 Description: top output showing the impact of the --nice flag on CPU share between a normal and a low-priority container.
 
-    <img width="1145" height="464" alt="priorityContainer" src="https://github.com/user-attachments/assets/2686a13a-6993-483e-a9a7-88d275516ea5" />
+    <img width="1145" height="464" alt="priorityContainer" src="https://github.com/user-attachments/assets/285aaae5-1fcc-4697-9fa6-196ec7b8af34" />
+
 
 
 8. Clean Teardown
