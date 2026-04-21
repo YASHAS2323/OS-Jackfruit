@@ -140,6 +140,7 @@ Description: Evidence of the logging pipeline capturing output from a containeri
 
    <img width="742" height="139" alt="logPiping" src="https://github.com/user-attachments/assets/bcd9abc6-2bee-4282-a186-7ab6d828902f" />
 
+   <img width="660" height="200" alt="image" src="https://github.com/user-attachments/assets/e13f8b11-7886-4089-a4ba-426dcbf95d7f" />
 
 
 4. CLI and IPC
